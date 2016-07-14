@@ -1,7 +1,7 @@
-package com.ufo.${project_name}.center.dao.impl;
+package com.ufo.${project_name}.center.dao.${model_name_uncapitalize}.impl;
 
-import com.ufo.${project_name}.center.dao.${model_name}DAO;
-import com.ufo.${project_name}.center.dao.mapper.${model_name}Mapper;
+import com.ufo.${project_name}.center.dao.${model_name_uncapitalize}.${model_name}DAO;
+import com.ufo.${project_name}.center.dao.${model_name_uncapitalize}.mapper.${model_name}Mapper;
 import com.ufo.${project_name}.center.model.${model_name};
 import com.ufo.${project_name}.common.dao.impl.BaseDAOImpl;
 import com.ufo.${project_name}.common.dao.mapper.BaseMapper;

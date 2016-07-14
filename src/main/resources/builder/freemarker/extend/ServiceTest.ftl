@@ -1,6 +1,6 @@
-package com.ufo.${project_name}.center.test.service;
+package com.ufo.${project_name}.center.test.service.${model_name_uncapitalize};
 
-import com.ufo.${project_name}.center.dao.${model_name}DAO;
+import com.ufo.${project_name}.center.dao.${model_name_uncapitalize}.${model_name}DAO;
 import com.ufo.${project_name}.center.test.junit.AbstractTest;
 import com.ufo.${project_name}.center.model.${model_name};
 import com.ufo.${project_name}.common.mybatis.pagehelper.PageList;

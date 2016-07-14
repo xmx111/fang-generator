@@ -1,4 +1,4 @@
-package com.ufo.${project_name}.center.service;
+package com.ufo.${project_name}.center.service.${model_name_uncapitalize};
 
 import com.ufo.${project_name}.center.model.${model_name};
 import com.ufo.${project_name}.common.service.BaseService;

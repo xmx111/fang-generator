@@ -72,7 +72,7 @@ public class SourceCodeBuilder {
         dataMap.put("pkgName", pkgName); // pkgName
         dataMap.put("model_name_uncapitalize", uncapClassName);  // user
         dataMap.put("id_type", "Long");
-        dataMap.put("model_title", modelName);
+        dataMap.put("model_title", className);
         boolean all = introspectedTable.getTableConfiguration().getProperties().size() == 0;
         dataMap.put("insert", introspectedTable.getTableConfigurationProperty("insert") != null || all);
         dataMap.put("selectByPrimaryKey", introspectedTable.getTableConfigurationProperty("selectByPrimaryKey") != null || all);
