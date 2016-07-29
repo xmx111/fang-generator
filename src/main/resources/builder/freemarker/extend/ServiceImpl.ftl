@@ -1,8 +1,8 @@
-package com.ufo.${project_name}.center.service.${model_name_uncapitalize}.impl;
+package com.ufo.${project_name}.center.service.${pkgName}.impl;
 
-import com.ufo.${project_name}.center.dao.${model_name_uncapitalize}.${model_name}DAO;
+import com.ufo.${project_name}.center.dao.${pkgName}.${model_name}DAO;
 import com.ufo.${project_name}.center.model.${model_name};
-import com.ufo.${project_name}.center.service.${model_name_uncapitalize}.${model_name}Service;
+import com.ufo.${project_name}.center.service.${pkgName}.${model_name}Service;
 import com.ufo.${project_name}.common.dao.BaseDAO;
 import com.ufo.${project_name}.common.service.impl.BaseServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;

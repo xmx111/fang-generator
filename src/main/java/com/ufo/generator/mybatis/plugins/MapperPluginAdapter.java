@@ -539,7 +539,7 @@ public class MapperPluginAdapter extends PluginAdapter {
                 .getFullyQualifiedTableNameAtRuntime());
         insertClause.append(" ("); //$NON-NLS-1$
 
-        valuesClause.append("values <foreach collection=\"list\" item=\"item\" open=\"(\" close=\")\" separator=\",\">"); //$NON-NLS-1$
+        valuesClause.append("values <foreach collection=\"list\" item=\"item\" separator=\",\">("); //$NON-NLS-1$
 
         List<String> valuesClauses = new ArrayList<String>();
         Iterator<IntrospectedColumn> iter = introspectedTable.getAllColumns()
@@ -574,7 +574,7 @@ public class MapperPluginAdapter extends PluginAdapter {
         insertClause.append(')');
         answer.addElement(new TextElement(insertClause.toString()));
 
-        valuesClause.append("</foreach>");
+        valuesClause.append(")</foreach>");
         valuesClauses.add(valuesClause.toString());
         for (String clause : valuesClauses) {
             answer.addElement(new TextElement(clause));

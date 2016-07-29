@@ -1,4 +1,4 @@
-package com.ufo.${project_name}.center.dao.${model_name_uncapitalize};
+package com.ufo.${project_name}.center.dao.${pkgName};
 
 import com.ufo.${project_name}.center.model.${model_name};
 import com.ufo.${project_name}.common.dao.BaseDAO;

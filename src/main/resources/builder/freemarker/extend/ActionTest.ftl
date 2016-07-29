@@ -1,7 +1,7 @@
-package com.ufo.${project_name}.center.test.web.${model_name_uncapitalize};
+package com.ufo.${project_name}.center.test.web.${pkgName};
 
 import com.ufo.${project_name}.center.test.junit.AbstractWebTest;
-import com.ufo.framework.util.UtilJson;
+import com.ufo.fang.common.util.JsonUtils;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
@@ -36,7 +36,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
         String html = mvc.perform(get("/${model_name_uncapitalize}/index.htm").with(apiSignRequestPostProcessor))
         .andReturn().getResponse().getContentAsString();
         System.out.println(html);
-        logger.info("html:\n{}", UtilJson.writerWithDefaultPrettyPrinter(html));
+        logger.info("html:\n{}", JsonUtils.writerWithDefaultPrettyPrinter(html));
     }
 
     /**

@@ -64,13 +64,14 @@ public class SourceCodeBuilder {
         String className = StringUtil.substringAfterLast(modelName, "."); //  className = User
         String uncapClassName = StringUtil.uncapitalize(className); //  className = user
         String pkgName = StringUtil.lowerCase(className); //  className = user
-
+        String connectClassName = StringUtil.join(StringUtil.splitByCharacterTypeCamelCase(uncapClassName), "-"); // user
         Map<String, Object> dataMap = new HashMap<String, Object>();
         dataMap.put("date", new Date());
         dataMap.put("project_name", projectName);  // demo
         dataMap.put("model_name", className); // User
         dataMap.put("pkgName", pkgName); // pkgName
         dataMap.put("model_name_uncapitalize", uncapClassName);  // user
+        dataMap.put("connect_name", connectClassName);  // user
         dataMap.put("id_type", "Long");
         dataMap.put("model_title", className);
         boolean all = introspectedTable.getTableConfiguration().getProperties().size() == 0;
@@ -111,15 +112,15 @@ public class SourceCodeBuilder {
         }
         if (genFilesType.indexOf("page") != -1) {
             process(cfg.getTemplate("PageIndex.ftl"), dataMap, webAppPath + "WEB-INF" + File.separator + "template" + File.separator + "view" + File.separator + pkgName + File.separator,
-                    "index.ftl");
+                    (genFilesModal.equals("zui") ? connectClassName : "") + "index.ftl");
             process(cfg.getTemplate("PageOperator.ftl"), dataMap, webAppPath + "WEB-INF" + File.separator + "template" + File.separator + "view" + File.separator + pkgName + File.separator,
-                    "operator.ftl");
+                    (genFilesModal.equals("zui") ? connectClassName : "") + "operator.ftl");
         }
         if (genFilesType.indexOf("js") != -1) {
             process(cfg.getTemplate("JSIndex.ftl"), dataMap, webAppPath + "statics" + File.separator + "js" + File.separator + pkgName + File.separator,
-                    "index.js");
+                    (genFilesModal.equals("zui") ? connectClassName : "") + "index.js");
             process(cfg.getTemplate("JSOperator.ftl"), dataMap, webAppPath + "statics" + File.separator + "js" + File.separator + pkgName + File.separator,
-                    "operator.js");
+                    (genFilesModal.equals("zui") ? connectClassName : "") + "operator.js");
         }
     }
 
