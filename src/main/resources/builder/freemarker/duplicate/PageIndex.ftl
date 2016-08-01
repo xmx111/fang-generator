@@ -10,7 +10,7 @@ ${r"<#assign"} js_config=[
 'delete':'${r"${basicURL}"}delete.json',
 'batchUpdate':'${r"${basicURL}"}batchStatusChange.json'
 }"]>
-${r"<#assign"} js_url=['/statics/js/${pkgName}/index.js']>
+${r"<#assign"} js_url=['/statics/js/${pkg_name}/index.js']>
 ${r"<@iframe.html js_config=js_config js_url=js_url >"}
 <div class="easyui-tabs" id="Data_Tabs" fit="true" border="false">
     <div title="列表" class="tab-container">

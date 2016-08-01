@@ -1,7 +1,7 @@
-package com.ufo.${project_name}.center.web.${pkgName};
+package com.ufo.${project_name}.center.web.${pkg_name};
 
 import com.ufo.${project_name}.center.model.${model_name};
-import com.ufo.${project_name}.center.service.${pkgName}.${model_name}Service;
+import com.ufo.${project_name}.center.service.${pkg_name}.${model_name}Service;
 import com.ufo.${project_name}.common.exceptions.ServiceException;
 import com.ufo.${project_name}.common.mybatis.pagehelper.PageList;
 import com.ufo.${project_name}.common.web.BaseAction;
@@ -29,13 +29,13 @@ public class ${model_name}Action extends BaseAction {
 
     @RequestMapping("index.htm")
     public String index() {
-        return this.toView("${pkgName}/index");
+        return this.toView("${pkg_name}/index");
     }
 
 <#if insert==true>
     @RequestMapping("add.htm")
     public String addView() {
-        return toView("${pkgName}/operator");
+        return toView("${pkg_name}/operator");
     }
 </#if>
 
@@ -43,7 +43,7 @@ public class ${model_name}Action extends BaseAction {
     @RequestMapping("modify.htm")
     public String modifyView(Long id, ModelMap map) throws ServiceException {
         map.put("data", ${model_name_uncapitalize}Service.queryById(id));
-        return toView("${pkgName}/operator");
+        return toView("${pkg_name}/operator");
     }
 </#if>
 

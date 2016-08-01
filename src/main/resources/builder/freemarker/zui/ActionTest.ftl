@@ -41,21 +41,11 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 
     /**
     *
-    * Method: findByPage(Integer pageNum, Integer pageSize)
+    * Method: query(Integer pageNum, Integer pageSize)
     *
     */
     @Test
-    public void testFindByPage() throws Exception {
-        //TODO: Test goes here...
-    }
-
-    /**
-    *
-    * Method: update(${project_name} dto)
-    *
-    */
-    @Test
-    public void testUpdate() throws Exception {
+    public void testQuery() throws Exception {
         //TODO: Test goes here...
     }
 

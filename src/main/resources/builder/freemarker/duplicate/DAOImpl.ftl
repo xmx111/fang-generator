@@ -1,7 +1,7 @@
-package com.ufo.${project_name}.center.dao.${pkgName}.impl;
+package com.ufo.${project_name}.center.dao.${pkg_name}.impl;
 
-import com.ufo.${project_name}.center.dao.${pkgName}.${model_name}DAO;
-import com.ufo.${project_name}.center.dao.${pkgName}.mapper.${model_name}Mapper;
+import com.ufo.${project_name}.center.dao.${pkg_name}.${model_name}DAO;
+import com.ufo.${project_name}.center.dao.${pkg_name}.mapper.${model_name}Mapper;
 import com.ufo.${project_name}.center.model.${model_name};
 import com.ufo.${project_name}.common.exceptions.DAOException;
 import com.ufo.${project_name}.common.mybatis.pagehelper.PageList;

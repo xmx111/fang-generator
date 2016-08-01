@@ -1,4 +1,4 @@
-<#assign js_url=['/statics/js/${pkgName}/operator.js']>
+<#assign js_url=['/statics/js/${pkg_name}/operator.js']>
 ${r"<@iframe.html js_config=[] js_url=js_url >"}
 <div title="${model_title}信息" class="tab-container">
     <form id="Data_Form" method="post" >

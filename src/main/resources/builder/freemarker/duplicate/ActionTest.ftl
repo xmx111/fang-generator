@@ -1,4 +1,4 @@
-package com.ufo.${project_name}.center.test.web.${pkgName};
+package com.ufo.${project_name}.center.test.web.${pkg_name};
 
 import com.ufo.${project_name}.center.test.junit.AbstractWebTest;
 import com.ufo.framework.util.UtilJson;

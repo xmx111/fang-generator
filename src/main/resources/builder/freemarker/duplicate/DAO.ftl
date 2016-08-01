@@ -1,4 +1,4 @@
-package com.ufo.${project_name}.center.dao.${pkgName};
+package com.ufo.${project_name}.center.dao.${pkg_name};
 
 import com.ufo.${project_name}.center.model.${model_name};
 import com.ufo.${project_name}.common.exceptions.DAOException;

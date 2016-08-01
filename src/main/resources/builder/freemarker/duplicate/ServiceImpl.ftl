@@ -1,8 +1,8 @@
-package com.ufo.${project_name}.center.service.${pkgName}.impl;
+package com.ufo.${project_name}.center.service.${pkg_name}.impl;
 
-import com.ufo.${project_name}.center.dao.${pkgName}.${model_name}DAO;
+import com.ufo.${project_name}.center.dao.${pkg_name}.${model_name}DAO;
 import com.ufo.${project_name}.center.model.${model_name};
-import com.ufo.${project_name}.center.service.${pkgName}.${model_name}Service;
+import com.ufo.${project_name}.center.service.${pkg_name}.${model_name}Service;
 import com.ufo.${project_name}.common.exceptions.DAOException;
 import com.ufo.${project_name}.common.exceptions.ServiceException;
 import com.ufo.${project_name}.common.mybatis.pagehelper.PageList;

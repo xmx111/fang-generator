@@ -1,4 +1,4 @@
-${r"<#assign"} basicURL="/${pkgName}/">
+${r"<#assign"} basicURL="/${pkg_name}/">
 ${r"<#assign"} js_config=[
 "'basicURL':'${r"${basicURL}"}'",
 "'urlMap':{
@@ -8,7 +8,7 @@ ${r"<#assign"} js_config=[
 'delete':'${r"${basicURL}"}doDelete.json',
 'batchUpdate':'${r"${basicURL}"}doBatchStatusChange.json'
 }"]>
-${r"<#assign"} js_url='[/statics/js/${pkgName}/${model_name_uncapitalize}Index.js]'>
+${r"<#assign"} js_url='[/statics/js/${pkg_name}/${model_name_uncapitalize}Index.js]'>
 ${r"<@macro.iframe js_config=js_config js_url=js_url >"}
 <div class="easyui-tabs" id="Data_Tabs" fit="true" border="false">
     <div title="列表" class="tab-container">

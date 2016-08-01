@@ -1,5 +1,5 @@
 ${r"<@macro.iframe js_config=js_config js_url=js_url >"}
-<script language="text/javascript" src="/statics/js/${pkgName}/operator.js"></script>
+<script language="text/javascript" src="/statics/js/${pkg_name}/operator.js"></script>
 <div title="${model_title}信息" class="tab-container">
     <form id="Data_Form" method="post" >
         <input type="hidden" id="id" name="id" value="${r"${data.id}"}" />

@@ -7,6 +7,7 @@ import com.ufo.${project_name}.common.web.BaseTemplateAction;
 import com.ufo.${project_name}.common.exceptions.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -20,7 +21,7 @@ import java.util.Map;
  * @created ${date?string("yyyy-MM-dd")}
  */
 @Controller
-@RequestMapping("/${model_name_uncapitalize}")
+@RequestMapping("/${pkg_name}")
 public class ${model_name}Action extends BaseTemplateAction<${model_name}, ${id_type}> {
 
     @Autowired
@@ -33,26 +34,30 @@ public class ${model_name}Action extends BaseTemplateAction<${model_name}, ${id_
 
     @RequestMapping("index.htm")
     public String index() throws ServiceException {
-        return this.toView("${model_name_uncapitalize}/${model_name_uncapitalize}Index");
+        return this.toView("${pkg_name}/${connect_name}-index");
     }
 
-    @RequestMapping("queryForPage.json")
+    @RequestMapping("operator.htm")
+    public String operator(Long id, ModelMap map) throws ServiceException {
+        if (id != null)
+            map.put("data", getService().queryById(id));
+        return this.toView("${pkg_name}/${connect_name}-operator");
+    }
+
+    @RequestMapping("query.json")
     @ResponseBody
-    public Object queryForPage(Integer page, Integer rows) throws ServiceException {
+    public Object query(Integer page, Integer rows) throws ServiceException {
         Map<String, Object> params = new HashMap<>();
-        return gridResult(getService().queryForPage(params, page, rows));
+        return gridPageResult(getService().queryForPage(params, page, rows));
     }
 
-    @RequestMapping("add.do")
+    @RequestMapping("save.do")
     @ResponseBody
-    public Object add(${model_name} dto) throws ServiceException {
-        return add(dto);
-    }
-
-    @RequestMapping("modify.do")
-    @ResponseBody
-    public Object modify(${model_name} dto) throws ServiceException {
-        return modify(dto);
+    public Object save(${model_name} dto) throws ServiceException {
+        if (dto.getId() == null)
+            return add(dto);
+        else
+            return modify(dto);
     }
 
     @RequestMapping("delete.do")
