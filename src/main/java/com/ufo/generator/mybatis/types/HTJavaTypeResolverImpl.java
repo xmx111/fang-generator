@@ -18,5 +18,7 @@ public class HTJavaTypeResolverImpl extends JavaTypeResolverDefaultImpl {
         // tinyint转为Integer
         typeMap.put(Types.TINYINT, new JdbcTypeInformation("TINYINT", //$NON-NLS-1$
                 new FullyQualifiedJavaType(Integer.class.getName())));
+        typeMap.put(Types.BIT, new JdbcTypeInformation("BIT", //$NON-NLS-1$
+                new FullyQualifiedJavaType(Integer.class.getName())));
     }
 }

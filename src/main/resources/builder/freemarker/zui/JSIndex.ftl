@@ -6,9 +6,9 @@ $(document).ready(function () {
         editUrl : '${pkg_name}/operator.htm',
         deleteUrl : '${pkg_name}/delete.json',
         colModel : [
-            {name:'id', index: 'id', hidden:true},
+            {name:'id', lable: 'id', index: 'id', hidden:true},
         <#list modelFields as modelField>
-            {name: '${modelField.title!""}', index: '${modelField.fieldName!""}', width: 90}<#if (modelField_has_next)>,</#if>
+            {name: '${modelField.fieldName!""}', lable: '${modelField.title!""}', index: '${modelField.fieldName!""}', width: 90}<#if (modelField_has_next)>,</#if>
         </#list>
         ]
         // ,footerrow : true, userDataOnFooter: true
