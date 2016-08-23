@@ -9,13 +9,13 @@ import org.junit.After;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
 /**
-* ${model_name}Action Tester.
-*
-* @author <Authors name>
-    * @since <pre>${date?string("yyyy-MM-dd")}</pre>
-    * @version 1.0
-    */
-    public class ${model_name}ActionTest extends AbstractWebTest {
+ * ${model_name}Action Tester.
+ *
+ * @author <Authors name>
+ * @since <pre>${date?string("yyyy-MM-dd")}</pre>
+ * @version 1.0
+ */
+public class ${model_name}ActionTest extends AbstractWebTest {
 
     @Before
     public void before() throws Exception {
